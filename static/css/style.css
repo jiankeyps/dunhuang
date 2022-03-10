@@ -1,0 +1,67 @@
+/* cytoscape graph */
+/*
+#cy {
+    height: 600px;
+    width: 70%;
+    background-color: #f9f9f9;
+}
+*/
+
+
+
+.chazhao {line-height:1%;
+          text-align:center;
+         }
+
+
+p  {line-height:4%;
+   padding: 3px  10px;
+   margin:15px
+   border:1px
+   
+   }
+
+
+/*   查找*/
+p.zhao  {line-height:4%;
+   padding: 2px  10x;
+   margin:2px
+   border:0px
+   }
+
+
+ /*   多选框*/
+select {
+  width: 40%;
+  padding: 2px  5px;
+  border: 0px solid #ccc;
+  display:inline-block;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  }
+
+
+/*   图片廊*/
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 295px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
+
+
+

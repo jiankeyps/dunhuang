@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>敦煌壁画建筑知识图谱</title>
+    
+    <!--link rel="stylesheet" type="text/css" href="/home/ubuntu/work/dunhuang/static/css/style.css"-->         <!--引入外部的 CSS 文件-->
+    
+    <link href="/static/css/style.css" rel="stylesheet" />
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/cytoscape.min.js"></script>
+    <script src="/static/js/code.js"></script>
+</head>
+
+
+<body style="background-color:#C0C0C0;">     <!-- 内联css样式 ,色彩#D1D0CE-->
+
+    <h2 style="text-align:center;">敦 煌 壁 画 建 筑 知 识 图 谱</h2>     <!-- 标题 -->
+    <hr >      <!-- 水平线 -->
+
+     <div id="container"    style="width:100%">     <!-- 查询与知识图谱div 块，宽度100%-->
+
+
+
+<form action=""  method="post">
+
+
+          <div class="chazhao"   id="query-1" style="background-color:#B6B6B4;height:600px;width:15%;float:left;">
+
+
+                    <p > 朝     代</p>             
+                    <select name="chaodai">
+                    <option value="quanbuchaodai">全部</option>               
+                    <option value="beiliang">北凉</option>
+                    <option value="beiwei">北魏</option>
+                    <option value="xiwei">西魏</option>
+                    <option value="beizhou">北周</option>                
+                    <option value="chutang">初唐</option>
+                    <option value="shengtang">盛唐</option>
+                    <option value="zhongtang">中唐</option>
+                    <option value="wantang">晚唐</option>
+                    <option value="wudai">五代</option>
+                    <option value="songdai">宋代</option>
+                    <option value="xixia">西夏</option>
+                    <option value="yuandai">元代</option>
+                    </select>
+               
+
+
+                 <p > 洞    窟 </p>              
+                 <select name="dongku">
+                 <option value="quanbudongku">全部</option>
+                 <option value="mo276">莫276</option>
+                 <option value="mo301">莫301</option>
+                 <option value="mo442">莫442</option>
+                 </select>
+               
+
+
+                <p > 洞窟形制 </p>
+                <select name="xingzhi">
+                <option value="quanbuxingzhi">全部</option>
+                <option value="tazhu">中心塔柱窟</option>
+                <option value="fudou">覆斗顶形窟</option>
+                <option value="diantang">殿堂窟</option>
+                <option value="daxiang">大像窟</option>
+                <option value="niepan">涅槃窟</option>
+                <option value="chanku">禅窟</option>
+                <option value="yingku">影窟</option>
+                </select>
+          
+
+
+
+                <p> 主    题 </p>            
+                <select name="zhuti">
+                <option value="quanbuzhuti">全部</option>
+                <option value="bensheng">本生故事画</option>
+                <option value="fochuan">佛传故事画</option>
+                <option value="jingbian">经变故事画</option>
+                </select>
+           
+
+
+                <p> 布    局 </p>              
+                <select name="buju">
+                <option value="quanbubuju">全部</option>
+                <option value="danti">单体</option>
+                <option value="jianzhuqun">建筑群</option>
+                </select>
+            
+
+
+                <p> 类     型 </p>               
+                <select name="leixing">
+                <option value="quanbuleixing">全部</option>
+                <option value="fosi">佛寺</option>
+                <option value="ta">塔</option>
+                <option value="que">阙</option>
+                <option value="diantang">殿堂</option>
+                <option value="chengyuan">城垣</option>
+                <option value="wubi">坞壁</option>
+                <option value="yuanluo">院落</option>
+                <option value="guanshu">官署</option>
+                <option value="zhaidi">宅邸</option>
+                <option value="qiaoliang">桥梁</option>
+                <option value="jianyu">监狱</option>
+                <option value="lang">廊</option>
+                <option value="shigong">施工</option>
+                </select>
+           
+
+
+
+                <p> 屋     顶 </p>              
+                <select name="wuding">
+                <option value="quanbuwuding">全部</option>
+                <option value="wudianding">庑殿顶</option>
+                <option value="xieshanding">歇山顶</option>
+                <option value="cuanjianding">攒尖顶</option>
+                <option value="xuanshanding">悬山顶</option>
+                <option value="luding">盝顶</option>
+                <option value="huiding">盔顶</option>
+                </select>
+              
+                <p>   </p>           <!--空行-->
+                <p>   </p>
+                <p>   </p>
+                
+                <div>                           <!--查询按键>
+                <p  class = "zhao"> </p>                               
+                <!--input type="button" value="RETURN"   style="background-color:#ece9d8;width:40%"-->
+                <input type="submit" name="RETURN"   style="background-color:#ece9d8;width:40%">
+                </div>
+
+
+          </div>
+
+
+          <div class="chazhao"   id="query-2" style="background-color:#B6B6B4;height:600px;width:15%;float:left;">
+
+
+                 <p > 屋顶结构附件</p>                
+                    <select name="wudingjiegoufujian">
+                    <option value="quanbuwudingjiegoufujian">全部</option>
+                    <option value="yanchuan">檐椽</option>
+                    <option value="dougong">斗拱</option>
+                    <option value="lane">阑额</option>
+                    </select>
+               
+
+
+                 <p > 瓦     饰 </p>                
+                 <select name="washi">
+                 <option value="quanbuwashi">全部</option>
+                 <option value="chiwei">鸱尾</option>
+                 <option value="xieji">斜脊</option>
+                 <option value="chuiji">垂脊</option>
+                 <option value="qiaoqi">翘起</option>
+                 </select>
+                
+
+
+                <p > 屋     身 </p>              
+                <select name="wushen">
+                <option value="quanbuwushen">全部</option>
+                <option value="muzhu">木柱</option>
+                <option value="qiangti">墙体</option>
+                <option value="cejiao">侧脚</option>
+                </select>
+              
+
+
+
+                <p> 屋身结构附件 </p>              
+                <select name="wushenjiegoufujian">
+                <option value="quanbuwushenjiegoufujian">全部</option>
+                <option value="efang">额枋</option>
+                <option value="bidai">壁带</option>
+                <option value="menliang">门梁</option>
+                <option value="men">门</option>
+                <option value="chuang">窗</option>
+                </select>
+              
+
+
+                <p> 墙     饰 </p>             
+                <select name="qiangshi">
+                <option value="quanbuqiangshi">全部</option>
+                <option value="zhelian">遮帘</option>
+                <option value="weiman">帷幔</option>
+                <option value="zhangriban">障日板</option>
+                </select>
+             
+
+
+                <p> 基     座 </p>               
+                <select name="jizuo">
+                <option value="quanbujizuo">全部</option>
+                <option value="zhuanshiji">砖石基</option>
+                <option value="xumizuo">须弥座</option>
+                </select>
+                
+
+
+
+                <p> 基座附件 </p>               
+                <select name="jizuofujian">
+                <option value="quanbujizuofujian">全部</option>
+                <option value="taijie">台阶</option>
+                <option value="langan">栏杆</option>
+                </select>
+               
+
+
+
+                <br>
+                <br>
+
+
+          </div>
+
+ </form>
+
+
+
+
+          <div id="cy" style="background-color:#E5E4E2;height:600px;width:70%;float:left;">    
+          
+ 
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+     </div>
+
+
+
+<br>
+<br>
+
+     <div id="image"    style="width:100%">     <!-- 图片展示div 块，宽度100%-->        <!-- 查询与知识图图片展示谱div 块，宽度100%-->
+      <h4  > &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp节 点 图 片 展 示 ：</h4>
+
+
+       <!--展示循环-->
+
+
+
+     </div>
+
+
+
+
+
+
+     <div id="footer" style="background-color:#B6B6B4;height:30px;clear:both;text-align:center;">    <!-- 版权div 块，宽度100%-->
+        <h5>版    权 ©敦煌壁画建筑小组&nbsp&nbsp&nbsp&nbsp&nbsp          地    址：西安建筑科技大学&nbsp&nbsp&nbsp&nbsp&nbsp            电    话：82202374</h5>
+     </div>
+
+
+
+
+
+
+</body>
+</html>
